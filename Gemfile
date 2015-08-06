@@ -11,6 +11,10 @@ gem "slack_trello", '0.0.12'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
+gem 'rails_12factor', group: :production
+
+ruby "2.2.2"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
