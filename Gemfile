@@ -9,7 +9,7 @@ gem 'spring', :group => :development
 gem 'sqlite3'
 
 gem 'ruby-trello', :require => "trello"
-gem 'slack_trello'
+gem "slack_trello", '0.0.10'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
