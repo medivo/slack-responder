@@ -7,7 +7,7 @@ gem 'rails-api'
 gem 'spring', :group => :development
 
 gem 'ruby-trello', :require => "trello"
-gem "slack_trello", '0.0.12'
+gem "slack_trello", '0.0.13'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
