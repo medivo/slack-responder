@@ -1,5 +1,7 @@
 The slack-responder app responds to Trello POST requests and creates Trello cards :smile:.  Our [Slack Slash Command blog post](http://www.medivo.com/blog/slack-slash-command-to-trello/) provides a detailed walkthrough to get this app up-and-running to create cards on Trello backlog boards that correspond with Slack channels.  Here's the TL;DR:
 
+Here is a [video of the slack-responder app in action](https://www.youtube.com/watch?v=LNbVptbUjBk&feature=youtu.be).
+
 [codelitt](https://github.com/codelittinc/slack-trello) created a [Sinatra application](https://github.com/codelittinc/slack-trello) with the same functionality as this Rails application that is meant to be deployed with Docker.  slack-responder is set up to easily be deployed to Heroku.
 
 1. Deploy the app to Heroku (you can deploy elsewhere, but the app is all set up for Heroku).
