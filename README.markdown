@@ -6,9 +6,9 @@ The slack-responder app responds to Trello POST requests and creates Trello card
 
   - Log into Trello & go to [this site](https://trello.com/app-key) to get the `TRELLO_DEV_PUBLIC_KEY`.  
 
-  - Go to this page to get the `TRELLO_MEMBER_TOKEN`: https://trello.com/1/authorize?key=[THE_APP_KEY]&name=trello-show&expiration=never&response_type=token&scope=read,write  Slack will be creating cards, so it's imperative that scope=read,write is set.  
+  - Go to this page to get the `TRELLO_MEMBER_TOKEN`: https://trello.com/1/authorize?key=[THE_APP_KEY]&name=trello-show&expiration=never&response_type=token&scope=read,write  slack-responder will be creating cards, so it's imperative that scope=read,write is set.  
 
-  - Go to https://[YOUR_TEAM_DOMAIN].slack.com/services/new/incoming-webhook and choose a channel (it doesn't matter which channel you choose) to get the `SLACK_WEBHOOK_URL`.  
+  - Go to https://[YOUR_TEAM_DOMAIN].slack.com/services/new/incoming-webhook to get the `SLACK_WEBHOOK_URL`.  It forces you to choose a default channel, but this will be overriden, so it doesn't matter.  
 
   - Go to https://[YOUR_TEAM_DOMAIN].slack.com/services/new/slash-commands and create a custom slash command.  Type in /work, click the button, and grab the token from the next screen.  Route the POST request to http://[HEROKU_APP_NAME]/slack/work.  Use this token to set the `SLACK_WORK_COMMAND_TOKEN`.  Create two more custom slash commands for /retro and /card and use the tokens that are provided to set `SLACK_RETRO_COMMAND_TOKEN` and `SLACK_CREATE_CARD_COMMAND_TOKEN'.  
 
