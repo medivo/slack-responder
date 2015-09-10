@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.2.2"
+
 gem 'rails', '4.2.0'
 
 gem 'rails-api'
@@ -13,7 +15,9 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'rails_12factor', group: :production
 
-ruby "2.2.2"
+# mina gems are used for deploy
+gem 'mina', group: :development
+gem 'mina-unicorn', :require => false
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -22,7 +26,7 @@ ruby "2.2.2"
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano', :group => :development
