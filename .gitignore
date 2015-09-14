@@ -18,3 +18,5 @@
 
 .env
 Dockerfile
+
+/config/deploy.rb
