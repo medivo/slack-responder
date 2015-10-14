@@ -5,7 +5,8 @@ class SlackCommandsController < ApplicationController
   WHITELIST_TOKENS = [
     ENV["SLACK_WORK_COMMAND_TOKEN"],
     ENV["SLACK_CREATE_CARD_COMMAND_TOKEN"],
-    ENV["SLACK_RETRO_COMMAND_TOKEN"]
+    ENV["SLACK_RETRO_COMMAND_TOKEN"],
+    ENV["SLACK_COPY_CARDS_COMMAND_TOKEN"]
   ].compact
 
   def work
@@ -20,6 +21,11 @@ class SlackCommandsController < ApplicationController
 
   def retro
     response = SlackTrello::RetroCommand.new(params, ENV["SLACK_WEBHOOK_URL"]).run
+    render text: response
+  end
+
+  def copy_cards
+    response = SlackTrello::CopyCardsCommand.new(params, ENV["SLACK_WEBHOOK_URL"]).run
     render text: response
   end
 
