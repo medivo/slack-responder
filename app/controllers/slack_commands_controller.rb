@@ -10,22 +10,22 @@ class SlackCommandsController < ApplicationController
   ].compact
 
   def work
-    response = SlackTrello::WorkCommand.new(params, ENV["SLACK_WEBHOOK_URL"]).run
+    response = SlackTrello::Commands::Work.new(params, ENV["SLACK_WEBHOOK_URL"]).run
     render text: response
   end
 
   def create_card
-    response = SlackTrello::CreateCardCommand.new(params, ENV["SLACK_WEBHOOK_URL"]).run
+    response = SlackTrello::Commands::CreateCard.new(params, ENV["SLACK_WEBHOOK_URL"]).run
     render text: response
   end
 
   def retro
-    response = SlackTrello::RetroCommand.new(params, ENV["SLACK_WEBHOOK_URL"]).run
+    response = SlackTrello::Commands::Retro.new(params, ENV["SLACK_WEBHOOK_URL"]).run
     render text: response
   end
 
   def copy_cards
-    response = SlackTrello::CopyCardsCommand.new(params, ENV["SLACK_WEBHOOK_URL"]).run
+    response = SlackTrello::Commands::CopyCards.new(params, ENV["SLACK_WEBHOOK_URL"]).run
     render text: response
   end
 
